@@ -1,0 +1,7 @@
+{
+    "databasemManagementSystem" : "MySql",
+    "username" : "root",
+    "password" : "123jonathan123100300!!!",
+    "address" : "localhost:3306",
+    "databaseName" : "Tester"
+}
