@@ -1,4 +1,3 @@
-USE testers;
 
 CREATE TABLE news(
 id integer PRIMARY KEY AUTO_INCREMENT,
