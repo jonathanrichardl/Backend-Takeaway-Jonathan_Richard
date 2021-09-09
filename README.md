@@ -18,13 +18,20 @@ Example: GET /news/Hello%20Bareksa
 #### DELETE : Remove the news with the corresponding title(will be added into the deleted table)
 Example: DELETE /news/Hello%20Bareksa
 #### PATCH : Modify Title, topic, tags (old tags would be removed), or status, unmodified field shall be empty
-Example  PATCH /news/Hello%20Bareksa (Content-type: JSON)
+Example: PATCH /news/Hello%20Bareksa (Content-type: JSON)
+
 Payload:
+
 {
+
     "title": "Healthy Investation for Everyone",
+    
     "tags" : ["Investation", "Money"],
+    
     "status" : "Published"
+    
 }
+
 
 ## /news/{title}/tags
 #### POST: Add new tags into the existing news, will ignore duplicates
