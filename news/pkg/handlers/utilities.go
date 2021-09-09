@@ -83,3 +83,10 @@ func (h *HTTPHandler) addTags(newsTitle string, tags []string) {
 		}
 	}
 }
+
+func (h *HTTPHandler) deleteTags(newsTitle string, tags string) {
+	err := h.database.DeleteData(fmt.Sprintf("DELETE FROM tags WHERE tags = '%s'AND news_id = (SELECT id FROM news WHERE title = '%s');", tags, newsTitle))
+	if err != nil {
+		log.Println("Error removing tags: ", err.Error())
+	}
+}

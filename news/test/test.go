@@ -76,6 +76,15 @@ func TestRetreiveNewsByTopic(t *testing.T) {
 
 }
 
+func TestRetreiveNewsByState(t *testing.T) {
+	router := Init()
+	req, _ := http.NewRequest(http.MethodGet, "/news/status/published", nil)
+	resp := httptest.NewRecorder()
+	router.Router.ServeHTTP(resp, req)
+	assert.Equal(t, 200, resp.Code, "Ok response")
+
+}
+
 func TestModifyExistingNews(t *testing.T) {
 	router := Init()
 	Title := "NewTitle"
@@ -102,7 +111,21 @@ func TestAddNewTagsIntoNews(t *testing.T) {
 	}
 	payload := new(bytes.Buffer)
 	json.NewEncoder(payload).Encode(newNews)
-	req, _ := http.NewRequest(http.MethodPost, "/news/WhatIsGo", payload)
+	req, _ := http.NewRequest(http.MethodPost, "/news/WhatIsGo/tags", payload)
+	resp := httptest.NewRecorder()
+	router.Router.ServeHTTP(resp, req)
+	assert.Equal(t, 200, resp.Code, "Ok response")
+
+}
+
+func TestDeleteTagsofNews(t *testing.T) {
+	router := Init()
+	newNews := models.TagsUpdate{
+		Tags: []string{"Golang", "Program"},
+	}
+	payload := new(bytes.Buffer)
+	json.NewEncoder(payload).Encode(newNews)
+	req, _ := http.NewRequest(http.MethodPost, "/news/WhatIsGo/tags/Golang", payload)
 	resp := httptest.NewRecorder()
 	router.Router.ServeHTTP(resp, req)
 	assert.Equal(t, 200, resp.Code, "Ok response")

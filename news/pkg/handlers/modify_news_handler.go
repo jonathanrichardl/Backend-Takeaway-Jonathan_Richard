@@ -74,3 +74,17 @@ func (h *HTTPHandler) AddNewTags(w http.ResponseWriter, r *http.Request) {
 	h.addTags(newsTitle, tagsToAdd)
 
 }
+
+func (h *HTTPHandler) RemoveTags(w http.ResponseWriter, r *http.Request) {
+	h.logger.InfoLogger.Println("Request to remove tags received")
+	request := mux.Vars(r)
+	newsTitle := request["title"]
+	tagToRemove := request["tags"]
+	if !h.database.CheckIfExists(fmt.Sprintf("SELECT EXISTS(SELECT * FROM tags WHERE tags = '%s' AND news_id = (SELECT id from news where title = '%s')", tagToRemove, newsTitle)) {
+		h.logger.WarningLogger.Printf("News %s does not have tag %s", newsTitle, tagToRemove)
+		return
+	}
+	h.logger.InfoLogger.Println("New tags added!")
+	h.deleteTags(newsTitle, tagToRemove)
+
+}

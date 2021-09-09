@@ -28,11 +28,15 @@ Payload:
 
 ## /news/{title}/tags
 #### POST: Add new tags into the existing news, will ignore duplicates
-Example  POST /news/Hello%20Bareksa/tags (Content-type: JSON)
+Example:  POST /news/Hello%20Bareksa/tags (Content-type: JSON)
 Payload:
 {
     "tags" : ["Bank", "Further Use"],
 }
+## /news/{title}/tags/{tags}
+#### Delete: Remove tags of news if exist
+Example: DELETE /news/Hello%20Bareksa/tags/money
+
 ## /news/topic/ {topic}
 #### GET : Retrieve news with the corresponding topic
 Example: GET/news/topic/investation

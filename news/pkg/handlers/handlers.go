@@ -27,6 +27,7 @@ func (h *HTTPHandler) RegisterAllHandlers() {
 	h.router.RegisterHandler("/news/{title}", h.DeleteNewsHandler, "DELETE")
 	h.router.RegisterHandler("/news/{title}", h.ModifyNewsHandler, "PATCH")
 	h.router.RegisterHandler("/news/{title}/tags", h.AddNewTags, "POST")
+	h.router.RegisterHandler("/news/{title}/tags/{tags}", h.RemoveTags, "DELETE")
 	h.router.RegisterHandler("/news/topic/{topic}", h.GetNewsByTopicHandler, "GET")
 	h.router.RegisterHandler("/news/status/{status}", h.GetNewsByStatusHandler, "GET")
 }
