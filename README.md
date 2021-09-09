@@ -1,46 +1,43 @@
-# Backend-Takeaway-Jonathan_Richard
-Written fully by Jonathan Richard.
-
+# Backend Takeaway 
+Written fully by Jonathan Richard. Database USed : mysql, additional go packages:
+### 1. github.com/go-sql-driver/mysql 
+### 2. github.com/gorilla/mux 
 # APIs
 ## /news
 #### GET : Retrieve all news 
 #### POST : Add a news (Will reject duplicates)
 Example POST /news (Content-type: JSON)
-```
 {
     "title": "Hello Bareksa",
     "topic": "Investation",
     "tags" : ["Economy", "Business"],
     "status" : "Draft"
 }
-```
 ## /news/{title}
 #### GET : Retrieve news with the corresponding title 
 Example: GET /news/Hello%20Bareksa
 #### DELETE : Remove the news with the corresponding title(will be added into the deleted table)
 Example: DELETE /news/Hello%20Bareksa
 #### PATCH : Modify Title, topic, tags (old tags would be removed), or status, unmodified field shall be empty
-Example: PATCH /news/Hello%20Bareksa (Content-type: JSON)
-
+Example  PATCH /news/Hello%20Bareksa (Content-type: JSON)
 Payload:
-```
 {
     "title": "Healthy Investation for Everyone",
     "tags" : ["Investation", "Money"],
     "status" : "Published"
 }
-```
-
 
 ## /news/{title}/tags
 #### POST: Add new tags into the existing news, will ignore duplicates
-Example  POST /news/Hello%20Bareksa/tags (Content-type: JSON)
+Example:  POST /news/Hello%20Bareksa/tags (Content-type: JSON)
 Payload:
-```
 {
     "tags" : ["Bank", "Further Use"],
 }
-```
+## /news/{title}/tags/{tags}
+#### Delete: Remove tags of news if exist
+Example: DELETE /news/Hello%20Bareksa/tags/money
+
 ## /news/topic/ {topic}
 #### GET : Retrieve news with the corresponding topic
 Example: GET/news/topic/investation
@@ -50,6 +47,7 @@ Example: GET/news/topic/investation
 Example: GET /news/status/deleted 
 or
 GET /news/status/draft
+
 
 # Database
 I provided databaseinit.sql that contains queries that creates the required table 
