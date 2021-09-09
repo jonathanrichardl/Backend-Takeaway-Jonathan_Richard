@@ -20,6 +20,9 @@ func NewHttpHandlers(DatabaseInstance *database.DBInstance, RouterInstance *rout
 func (h *HTTPHandler) RegisterAllHandlers() {
 	h.router.RegisterHandler("/news", h.AddNewsHandler, "POST")
 	h.router.RegisterHandler("/news", h.GetAllNewsHandler, "GET")
-	h.router.RegisterHandler("/news/{news}", h.GetNewsByNameHandler, "GET")
+	h.router.RegisterHandler("/news/{title}", h.GetNewsByTitleHandler, "GET")
+	h.router.RegisterHandler("/news/{title}", h.DeleteNewsHandler, "DELETE")
+	h.router.RegisterHandler("/news/{title}", h.ModifyNewsHandler, "PATCH")
 	h.router.RegisterHandler("/news/topic/{topic}", h.GetNewsByTopicHandler, "GET")
+	h.router.RegisterHandler("/news/status/{status}", h.GetNewsByStatusHandler, "GET")
 }

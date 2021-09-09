@@ -3,6 +3,7 @@ package handlers
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 	"news/pkg/models"
 
@@ -10,56 +11,60 @@ import (
 )
 
 func (h *HTTPHandler) GetAllNewsHandler(w http.ResponseWriter, r *http.Request) {
-	var response []models.News
-	retrievedData, err := h.database.RetrieveData("SELECT * FROM news")
+	retrievedData, err := h.database.RetrieveData("SELECT title,topic,status FROM news")
 	if err != nil {
-
+		log.Println("Error retrieving database ", err.Error())
 	}
-	for retrievedData.Data.Next() {
-		var each models.News
-		err := retrievedData.Data.Scan(&each.Title, &each.Tags, &each.Topic)
-		if err != nil {
-
-		}
-		response = append(response, each)
-	}
+	response := h.retrieveNews(retrievedData)
 	json.NewEncoder(w).Encode(response)
 }
 
 func (h *HTTPHandler) GetNewsByTopicHandler(w http.ResponseWriter, r *http.Request) {
-	var response []models.News
 	request := mux.Vars(r)
-	topicName := request["name"]
-	retrievedData, err := h.database.RetrieveData(fmt.Sprintf("SELECT * FROM NEWS WHERE TOPIC = %s;", topicName))
+	topicName := request["topic"]
+	retrievedData, err := h.database.RetrieveData(fmt.Sprintf("SELECT title,status,topic FROM NEWS WHERE TOPIC = '%s';", topicName))
 	if err != nil {
-
+		log.Println(err.Error())
 	}
-	for retrievedData.Data.Next() {
-		var each models.News
-		err := retrievedData.Data.Scan(&each.Title, &each.Tags, &each.Topic)
-		if err != nil {
-
-		}
-		response = append(response, each)
-	}
+	response := h.retrieveNews(retrievedData)
 	json.NewEncoder(w).Encode(response)
 }
 
-func (h *HTTPHandler) GetNewsByNameHandler(w http.ResponseWriter, r *http.Request) {
-	var response []models.News
+func (h *HTTPHandler) GetNewsByTitleHandler(w http.ResponseWriter, r *http.Request) {
 	request := mux.Vars(r)
-	newsName := request["name"]
-	retrievedData, err := h.database.RetrieveData(fmt.Sprintf("SELECT * FROM news WHERE name = %s;", newsName))
+	newsName := request["title"]
+	retrievedData, err := h.database.RetrieveData(fmt.Sprintf("SELECT title,topic,status FROM news WHERE title = '%s';", newsName))
 	if err != nil {
-
+		log.Println(err.Error())
 	}
-	for retrievedData.Data.Next() {
-		var each models.News
-		err := retrievedData.Data.Scan(&each.Title, &each.Tags, &each.Topic)
-		if err != nil {
-
-		}
-		response = append(response, each)
-	}
+	response := h.retrieveNews(retrievedData)
 	json.NewEncoder(w).Encode(response)
+}
+
+func (h *HTTPHandler) GetNewsByStatusHandler(w http.ResponseWriter, r *http.Request) {
+	request := mux.Vars(r)
+	status := request["status"]
+	switch status {
+	case "deleted":
+		retrievedData, err := h.database.RetrieveData("SELECT * FROM deleted;")
+		if err != nil {
+			log.Println(err.Error())
+		}
+		var response []models.DeletedNews
+		for retrievedData.Data.Next() {
+			var each models.DeletedNews
+			retrievedData.Data.Scan(&each.Id, &each.Title)
+			response = append(response, each)
+		}
+		json.NewEncoder(w).Encode(response)
+
+	default:
+		retrievedData, err := h.database.RetrieveData(fmt.Sprintf("SELECT title,topic,status FROM news WHERE status = '%s';", status))
+		if err != nil {
+			log.Println(err.Error())
+		}
+		response := h.retrieveNews(retrievedData)
+		json.NewEncoder(w).Encode(response)
+	}
+
 }

@@ -19,5 +19,5 @@ func (a *RouterInstance) RegisterHandler(Path string, Handler func(w http.Respon
 }
 
 func (a *RouterInstance) Start() {
-	http.Handle("/", a.router)
+	http.ListenAndServe(":8080", a.router)
 }

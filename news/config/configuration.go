@@ -1,28 +1,20 @@
 package config
 
-import (
-	"encoding/json"
-	"io/ioutil"
-	"os"
-)
+import "os"
 
-type DatabaseConfig struct {
-	DatabaseManagementSystem string `json:"databaseManagementSystem"`
-	Username                 string `json:"username"`
-	Password                 string `json:"password"`
-	Address                  string `json:"address"`
-	DatabaseName             string `json:"databaseName"`
+type databaseConfig struct {
+	Username     string
+	Password     string
+	Address      string
+	DatabaseName string
 }
 
-func LoadDatabaseConfiguration() (*DatabaseConfig, error) {
-	jsonFile, err := os.Open("database.json")
-	// if we os.Open returns an error then handle it
-	if err != nil {
-		return nil, err
-	}
-	byteValue, _ := ioutil.ReadAll(jsonFile)
-	var result DatabaseConfig
-	json.Unmarshal([]byte(byteValue), &result)
+func LoadDatabaseConfiguration() (*databaseConfig, error) {
+	var result databaseConfig
+	result.Username = os.Getenv("USER_NAME")
+	result.Password = os.Getenv("PASSWORD")
+	result.Address = os.Getenv("ADRESS")
+	result.Address = os.Getenv("DATABASE_NAME")
 	return &result, nil
 
 }
