@@ -7,7 +7,7 @@ import (
 )
 
 type RouterInstance struct {
-	router *mux.Router
+	Router *mux.Router
 }
 
 func NewRouterInstance() *RouterInstance {
@@ -15,9 +15,9 @@ func NewRouterInstance() *RouterInstance {
 }
 
 func (a *RouterInstance) RegisterHandler(Path string, Handler func(w http.ResponseWriter, r *http.Request), method string) {
-	a.router.HandleFunc(Path, Handler).Methods(method)
+	a.Router.HandleFunc(Path, Handler).Methods(method)
 }
 
 func (a *RouterInstance) Start() {
-	http.Handle("/", a.router)
+	http.ListenAndServe(":8080", a.Router)
 }
