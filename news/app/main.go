@@ -4,21 +4,22 @@ import (
 	"log"
 	databaseinstance "news/pkg/database"
 	"news/pkg/handlers"
+	logger "news/pkg/logger"
 	"news/pkg/router"
 )
 
 func main() {
-	// SQL credentials are supplied in config/database.json
-	log.Println("Reading Database Configuration")
-	/*databaseConfig, err := config.LoadDatabaseConfiguration()
-	if err != nil {
-		log.Printf("Error setting database : %s\n", err.Error())
-		return
-	}
+	Logger := logger.NewLogger("log.txt")
+	Logger.InfoLogger.Println("Reading database configuration")
+	/*
+		databaseConfig, err := config.LoadDatabaseConfiguration()
+		if err != nil {
+			log.Printf("Error setting database : %s\n", err.Error())
+			return
+		}
 	*/
-
 	//initializing db and router
-	log.Println("Initializing Program")
+	Logger.InfoLogger.Println("Initializing Program")
 	Database, err := databaseinstance.NewDatabase("mysql",
 		"root", "123jonathan123100300!!!", "localhost:3306",
 		"testers")
@@ -28,7 +29,7 @@ func main() {
 		return
 	}
 	Router := router.NewRouterInstance()
-	handlers := handlers.NewHttpHandlers(Database, Router)
+	handlers := handlers.NewHttpHandlers(Database, Router, Logger)
 	handlers.RegisterAllHandlers()
 	Router.Start()
 }

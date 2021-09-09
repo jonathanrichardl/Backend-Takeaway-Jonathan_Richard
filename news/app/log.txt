@@ -1,0 +1,7 @@
+INFO: 2021/09/09 19:07:45 main.go:13: Reading database configuration
+INFO: 2021/09/09 19:07:45 main.go:22: Initializing Program
+INFO: 2021/09/09 19:09:06 add_news_handler.go:12: Add news request received
+Error: 2021/09/09 19:09:06 add_news_handler.go:21: Error unmarshalling request data:  json: cannot unmarshal array into Go struct field News.status of type string
+INFO: 2021/09/09 19:09:06 add_news_handler.go:32: News 'Di Jalanan Biru' is added into database
+INFO: 2021/09/09 19:09:37 add_news_handler.go:12: Add news request received
+INFO: 2021/09/09 19:09:37 add_news_handler.go:32: News 'Di Jalanan Hijau' is added into database
