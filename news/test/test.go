@@ -125,7 +125,7 @@ func TestDeleteTagsofNews(t *testing.T) {
 	}
 	payload := new(bytes.Buffer)
 	json.NewEncoder(payload).Encode(newNews)
-	req, _ := http.NewRequest(http.MethodPost, "/news/WhatIsGo/tags/Golang", payload)
+	req, _ := http.NewRequest(http.MethodDelete, "/news/WhatIsGo/tags/Golang", payload)
 	resp := httptest.NewRecorder()
 	router.Router.ServeHTTP(resp, req)
 	assert.Equal(t, 200, resp.Code, "Ok response")
