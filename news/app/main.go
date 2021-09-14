@@ -47,5 +47,4 @@ func main() {
 	handlers := handlers.NewHttpHandlers(database, router, Logger, redis)
 	handlers.RegisterAllHandlers()
 	router.Start(fmt.Sprintf("%s:%d", serverConfig.Server.Host, serverConfig.Server.Port))
-	fmt.Printf("Server is currently running at %s:%d", serverConfig.Server.Host, serverConfig.Server.Port)
 }
