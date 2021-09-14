@@ -1,0 +1,21 @@
+INFO: 2021/09/14 00:51:34 main.go:17: Reading database configuration
+INFO: 2021/09/14 00:51:34 main.go:23: Reading server configuration
+INFO: 2021/09/14 00:51:34 main.go:30: Initializing Program
+Error: 2021/09/14 00:51:49 get_news_handler.go:18: Can't retrieve news from SQL:  Error 1045: Access denied for user ''@'localhost' (using password: NO)
+Error: 2021/09/14 00:51:53 get_news_handler.go:18: Can't retrieve news from SQL:  Error 1045: Access denied for user ''@'localhost' (using password: NO)
+INFO: 2021/09/14 00:52:39 main.go:17: Reading database configuration
+INFO: 2021/09/14 00:52:39 main.go:23: Reading server configuration
+INFO: 2021/09/14 00:52:39 main.go:30: Initializing Program
+INFO: 2021/09/14 00:53:27 main.go:17: Reading database configuration
+INFO: 2021/09/14 00:53:27 main.go:23: Reading server configuration
+INFO: 2021/09/14 00:53:27 main.go:30: Initializing Program
+INFO: 2021/09/14 00:54:09 add_news_handler.go:12: Add news request received
+INFO: 2021/09/14 00:54:09 add_news_handler.go:32: News 'Save The Earth' is added into database
+INFO: 2021/09/14 00:54:56 modify_news_handler.go:29: Updating title of Hello World into Learn To Code with Udemy
+INFO: 2021/09/14 00:54:56 modify_news_handler.go:42: Updating topic of Learn To Code with Udemy into Published
+INFO: 2021/09/14 00:55:29 modify_news_handler.go:79: Request to remove tags received
+INFO: 2021/09/14 00:55:29 modify_news_handler.go:87: New tags added!
+INFO: 2021/09/14 00:56:05 modify_news_handler.go:29: Updating title of Hello World into Learn To Code with Udemy
+INFO: 2021/09/14 00:56:05 modify_news_handler.go:42: Updating topic of Learn To Code with Udemy into Draft
+INFO: 2021/09/14 00:56:28 add_news_handler.go:12: Add news request received
+INFO: 2021/09/14 00:56:29 add_news_handler.go:32: News 'I am rich' is added into database
