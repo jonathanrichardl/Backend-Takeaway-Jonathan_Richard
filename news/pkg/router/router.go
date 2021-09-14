@@ -19,5 +19,6 @@ func (a *RouterInstance) RegisterHandler(Path string, Handler func(w http.Respon
 }
 
 func (a *RouterInstance) Start(Address string) {
+	fmt.Printf("Server is currently running at %s", Address)
 	http.ListenAndServe(Address, a.Router)
 }
