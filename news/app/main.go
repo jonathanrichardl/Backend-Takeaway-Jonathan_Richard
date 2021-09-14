@@ -15,13 +15,11 @@ func main() {
 	Logger := logger.NewLogger("log.txt")
 	fmt.Println("Starting")
 	Logger.InfoLogger.Println("Reading database configuration")
-	/*
-		databaseConfig, err := config.LoadDatabaseConfiguration()
-		if err != nil {
-			log.Printf("Error setting database : %s\n", err.Error())
-			return
-		}
-	*/
+	databaseConfig, err := config.LoadDatabaseConfiguration()
+	if err != nil {
+		log.Printf("Error setting database : %s\n", err.Error())
+		return
+	}
 	Logger.InfoLogger.Println("Reading server configuration")
 	serverConfig, err := config.LoadServerConfiguration()
 	if err != nil {
@@ -30,14 +28,14 @@ func main() {
 	}
 	//initializing db and router
 	Logger.InfoLogger.Println("Initializing Program")
+	Database, err := database.NewDatabase("mysql",
+		databaseConfig.Username, databaseConfig.Password, databaseConfig.Address,
+		databaseConfig.DatabaseName)
 	/*
-		Database, err := database.NewDatabase("mysql",
-			databaseConfig.Username, databaseConfig.Password, databaseConfig.Address,
-			databaseConfig.DatabaseName)
-	*/
 	database, err := database.NewDatabase("mysql",
 		"newuser", "123Jonathan123100300!!!", "localhost:3306",
 		"testers")
+	*/
 	if err != nil {
 		log.Printf("Error received : %s\n", err.Error())
 		return
@@ -49,4 +47,5 @@ func main() {
 	handlers := handlers.NewHttpHandlers(database, router, Logger, redis)
 	handlers.RegisterAllHandlers()
 	router.Start(fmt.Sprintf("%s:%d", serverConfig.Server.Host, serverConfig.Server.Port))
+	fmt.Printf("Server is currently running at %s:%d", serverConfig.Server.Host, serverConfig.Server.Port)
 }
