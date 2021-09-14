@@ -39,7 +39,7 @@ func LoadServerConfiguration() (*Config, error) {
 	config := &Config{}
 
 	// Open config file
-	file, err := os.Open("config.yaml")
+	file, err := os.Open("../config/config.yaml")
 	if err != nil {
 		return nil, err
 	}
