@@ -1,6 +1,20 @@
 # Backend Takeaway 
-Written fully by Jonathan Richard.
+Update 14/09/2021 : Redis support added for all GET requests. 
 
+Written fully by Jonathan Richard. Database used : mysql, additional go packages:
+### 1. github.com/go-sql-driver/mysql 
+### 2. github.com/gorilla/mux 
+### 3. github.com/go-redis/redis/v8
+### 4. github.com/stretchr/testify
+# Project Structure
+## app 
+Contains main.go
+## pkg
+Reusable packages, consisted of Database driver, redis driver, router, and logger
+## config
+Contains configuration parser for Database (mysql), redis, and server 
+## test
+contains unit tests. 
 # APIs
 ## /news
 #### GET : Retrieve all news 
