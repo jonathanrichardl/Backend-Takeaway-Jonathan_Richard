@@ -18,6 +18,6 @@ func (a *RouterInstance) RegisterHandler(Path string, Handler func(w http.Respon
 	a.Router.HandleFunc(Path, Handler).Methods(method)
 }
 
-func (a *RouterInstance) Start() {
-	http.ListenAndServe(":8080", a.Router)
+func (a *RouterInstance) Start(Address string) {
+	http.ListenAndServe(Address, a.Router)
 }

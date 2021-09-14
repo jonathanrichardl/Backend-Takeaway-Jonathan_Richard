@@ -1,8 +1,4 @@
-USE testers;
-drop table tags;
-drop table news;
-
-drop table deleted;
+CREATE DATABASE testers;
 CREATE TABLE news(
 id integer PRIMARY KEY AUTO_INCREMENT,
 title varchar(45),

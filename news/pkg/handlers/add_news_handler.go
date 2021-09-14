@@ -30,4 +30,6 @@ func (h *HTTPHandler) AddNewsHandler(w http.ResponseWriter, r *http.Request) {
 	h.database.AddData(fmt.Sprintf("INSERT INTO news (Title,Topic,Status) VALUES ('%s','%s','%s');", news.Title, news.Topic, news.Status))
 	h.addTags(news.Title, news.Tags)
 	h.logger.InfoLogger.Printf("News '%s' is added into database\n", news.Title)
+	w.WriteHeader(http.StatusCreated)
+	w.Write([]byte(fmt.Sprintf("201 - News '%s' has been added", news.Title)))
 }

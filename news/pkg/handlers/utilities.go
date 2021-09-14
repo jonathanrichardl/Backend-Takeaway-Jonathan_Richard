@@ -41,6 +41,19 @@ func (h *HTTPHandler) retrieveNews(retrievedData *database.RetrievedData) []mode
 	return response
 }
 
+func (h *HTTPHandler) retrieveDeletedNews(retrievedData *database.RetrievedData) []models.DeletedNews {
+	var response []models.DeletedNews
+	for retrievedData.Data.Next() {
+		var each models.DeletedNews
+		err := retrievedData.Data.Scan(&each.Id, &each.Title)
+		if err != nil {
+			h.logger.ErrorLogger.Println("Can't retrieve data: ", err.Error())
+		}
+		response = append(response, each)
+	}
+	return response
+}
+
 /*
 For Modifying purposes
 */

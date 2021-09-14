@@ -22,4 +22,6 @@ func (h *HTTPHandler) DeleteNewsHandler(w http.ResponseWriter, r *http.Request) 
 	if err != nil {
 		h.logger.ErrorLogger.Println("Failed to delete news: ", err.Error())
 	}
+	w.WriteHeader(204)
+	w.Write([]byte(fmt.Sprintf("204 - News '%s' has been deleted", newsTitle)))
 }
