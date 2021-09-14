@@ -1,0 +1,158 @@
+INFO: 2021/09/09 22:19:56 main.go:13: Reading database configuration
+INFO: 2021/09/09 22:19:56 main.go:22: Initializing Program
+INFO: 2021/09/09 22:20:33 main.go:13: Reading database configuration
+INFO: 2021/09/09 22:20:33 main.go:22: Initializing Program
+INFO: 2021/09/09 22:21:11 main.go:13: Reading database configuration
+INFO: 2021/09/09 22:21:11 main.go:22: Initializing Program
+INFO: 2021/09/09 22:21:36 main.go:13: Reading database configuration
+INFO: 2021/09/09 22:21:36 main.go:22: Initializing Program
+INFO: 2021/09/09 22:27:46 main.go:13: Reading database configuration
+INFO: 2021/09/09 22:27:46 main.go:22: Initializing Program
+INFO: 2021/09/09 22:29:47 main.go:13: Reading database configuration
+INFO: 2021/09/09 22:29:47 main.go:22: Initializing Program
+INFO: 2021/09/09 22:31:35 main.go:13: Reading database configuration
+INFO: 2021/09/09 22:31:35 main.go:22: Initializing Program
+INFO: 2021/09/09 22:34:04 modify_news_handler.go:79: Request to remove tags received
+Error: 2021/09/09 22:34:04 modify_news_handler.go:90: Error unmarshaling remove tags request:  unexpected end of JSON input
+WARNING: 2021/09/09 22:34:04 modify_news_handler.go:101: No tags removed added!
+INFO: 2021/09/09 22:36:45 main.go:13: Reading database configuration
+INFO: 2021/09/09 22:36:45 main.go:22: Initializing Program
+INFO: 2021/09/09 22:36:57 modify_news_handler.go:79: Request to remove tags received
+INFO: 2021/09/09 22:36:57 modify_news_handler.go:87: New tags added!
+INFO: 2021/09/09 22:37:05 modify_news_handler.go:79: Request to remove tags received
+INFO: 2021/09/09 22:37:05 modify_news_handler.go:87: New tags added!
+INFO: 2021/09/09 22:37:29 modify_news_handler.go:79: Request to remove tags received
+INFO: 2021/09/09 22:37:29 modify_news_handler.go:87: New tags added!
+INFO: 2021/09/09 22:39:40 main.go:13: Reading database configuration
+INFO: 2021/09/09 22:39:40 main.go:22: Initializing Program
+INFO: 2021/09/09 22:39:44 modify_news_handler.go:79: Request to remove tags received
+INFO: 2021/09/09 22:39:44 modify_news_handler.go:87: New tags added!
+INFO: 2021/09/09 22:42:42 main.go:13: Reading database configuration
+INFO: 2021/09/09 22:42:42 main.go:22: Initializing Program
+INFO: 2021/09/09 22:42:47 modify_news_handler.go:79: Request to remove tags received
+INFO: 2021/09/09 22:42:47 modify_news_handler.go:87: New tags added!
+INFO: 2021/09/09 22:44:57 main.go:13: Reading database configuration
+INFO: 2021/09/09 22:44:57 main.go:22: Initializing Program
+INFO: 2021/09/09 22:45:31 add_news_handler.go:12: Add news request received
+INFO: 2021/09/09 22:45:31 add_news_handler.go:32: News 'Hello Bareksa' is added into database
+INFO: 2021/09/09 22:46:02 add_news_handler.go:12: Add news request received
+INFO: 2021/09/09 22:46:02 add_news_handler.go:32: News 'Hello World' is added into database
+INFO: 2021/09/09 22:46:50 modify_news_handler.go:29: Updating title of Hello Bareksa into Healthy Investation for Everyone
+INFO: 2021/09/09 22:46:51 modify_news_handler.go:38: Updating topic of Healthy Investation for Everyone into [Investation Money]
+INFO: 2021/09/09 22:46:51 modify_news_handler.go:42: Updating topic of Healthy Investation for Everyone into Published
+INFO: 2021/09/09 22:46:59 modify_news_handler.go:29: Updating title of Hello Bareksa into Healthy Investation for Everyone
+INFO: 2021/09/09 22:47:00 modify_news_handler.go:38: Updating topic of Healthy Investation for Everyone into [Investation Money]
+INFO: 2021/09/09 22:47:00 modify_news_handler.go:42: Updating topic of Healthy Investation for Everyone into Published
+INFO: 2021/09/09 22:47:38 modify_news_handler.go:29: Updating title of Hello Bareksa into Healthy Investation for Everyone
+INFO: 2021/09/09 22:47:38 modify_news_handler.go:38: Updating topic of Healthy Investation for Everyone into [Investation Money]
+INFO: 2021/09/09 22:47:38 modify_news_handler.go:42: Updating topic of Healthy Investation for Everyone into Publish
+INFO: 2021/09/09 22:49:04 modify_news_handler.go:79: Request to remove tags received
+INFO: 2021/09/09 22:49:04 modify_news_handler.go:87: New tags added!
+INFO: 2021/09/09 22:49:49 modify_news_handler.go:48: Request to add new tags received
+INFO: 2021/09/09 22:49:49 modify_news_handler.go:73: New tags added!
+INFO: 2021/09/13 06:39:59 main.go:15: Reading database configuration
+INFO: 2021/09/13 06:39:59 main.go:24: Initializing Program
+INFO: 2021/09/13 06:40:50 main.go:15: Reading database configuration
+INFO: 2021/09/13 06:40:50 main.go:24: Initializing Program
+INFO: 2021/09/13 07:01:35 main.go:15: Reading database configuration
+INFO: 2021/09/13 07:01:35 main.go:24: Initializing Program
+INFO: 2021/09/13 07:02:53 main.go:15: Reading database configuration
+INFO: 2021/09/13 07:02:53 main.go:24: Initializing Program
+Error: 2021/09/13 07:05:07 get_news_handler.go:15: Can't retrieve news:  Error 1698: Access denied for user 'root'@'localhost'
+INFO: 2021/09/13 07:11:43 main.go:15: Reading database configuration
+INFO: 2021/09/13 07:11:43 main.go:24: Initializing Program
+Error: 2021/09/13 07:11:58 get_news_handler.go:15: Can't retrieve news:  Error 1698: Access denied for user 'root'@'localhost'
+INFO: 2021/09/13 07:14:23 main.go:15: Reading database configuration
+INFO: 2021/09/13 07:14:23 main.go:24: Initializing Program
+Error: 2021/09/13 07:14:34 get_news_handler.go:15: Can't retrieve news:  Error 1698: Access denied for user 'root'@'localhost'
+INFO: 2021/09/13 07:15:01 main.go:15: Reading database configuration
+INFO: 2021/09/13 07:15:01 main.go:24: Initializing Program
+INFO: 2021/09/13 07:15:04 add_news_handler.go:12: Add news request received
+Error: 2021/09/13 07:15:04 add_news_handler.go:25: News with title Future of Investation already exists!
+INFO: 2021/09/13 07:41:48 main.go:15: Reading database configuration
+INFO: 2021/09/13 07:41:48 main.go:24: Initializing Program
+INFO: 2021/09/13 10:19:28 main.go:15: Reading database configuration
+INFO: 2021/09/13 10:19:28 main.go:24: Initializing Program
+INFO: 2021/09/13 10:20:18 add_news_handler.go:12: Add news request received
+INFO: 2021/09/13 10:20:18 add_news_handler.go:32: News 'Future of Investation' is added into database
+INFO: 2021/09/13 10:21:24 main.go:15: Reading database configuration
+INFO: 2021/09/13 10:21:24 main.go:24: Initializing Program
+INFO: 2021/09/13 10:25:13 main.go:15: Reading database configuration
+INFO: 2021/09/13 10:25:13 main.go:24: Initializing Program
+INFO: 2021/09/13 23:29:00 main.go:17: Reading database configuration
+INFO: 2021/09/13 23:29:00 main.go:25: Reading server configuration
+INFO: 2021/09/13 23:29:29 main.go:17: Reading database configuration
+INFO: 2021/09/13 23:29:29 main.go:25: Reading server configuration
+INFO: 2021/09/13 23:30:52 main.go:17: Reading database configuration
+INFO: 2021/09/13 23:30:52 main.go:25: Reading server configuration
+INFO: 2021/09/13 23:31:12 main.go:17: Reading database configuration
+INFO: 2021/09/13 23:31:12 main.go:25: Reading server configuration
+INFO: 2021/09/13 23:32:28 main.go:17: Reading database configuration
+INFO: 2021/09/13 23:32:28 main.go:25: Reading server configuration
+INFO: 2021/09/13 23:33:53 main.go:17: Reading database configuration
+INFO: 2021/09/13 23:33:53 main.go:25: Reading server configuration
+INFO: 2021/09/13 23:36:02 main.go:17: Reading database configuration
+INFO: 2021/09/13 23:36:02 main.go:25: Reading server configuration
+INFO: 2021/09/13 23:36:02 main.go:32: Initializing Program
+INFO: 2021/09/13 23:39:16 main.go:17: Reading database configuration
+INFO: 2021/09/13 23:39:16 main.go:25: Reading server configuration
+INFO: 2021/09/13 23:39:16 main.go:32: Initializing Program
+INFO: 2021/09/13 23:39:50 add_news_handler.go:12: Add news request received
+INFO: 2021/09/13 23:39:51 add_news_handler.go:32: News 'I am Rich' is added into database
+Error: 2021/09/13 23:43:39 get_news_handler.go:40: Can't retrieve news:  Error 1146: Table 'testers.NEWS' doesn't exist
+Error: 2021/09/13 23:44:48 get_news_handler.go:40: Can't retrieve news:  Error 1146: Table 'testers.NEWS' doesn't exist
+Error: 2021/09/13 23:46:59 get_news_handler.go:40: Can't retrieve news:  Error 1146: Table 'testers.NEWS' doesn't exist
+Error: 2021/09/13 23:47:00 get_news_handler.go:40: Can't retrieve news:  Error 1146: Table 'testers.NEWS' doesn't exist
+INFO: 2021/09/13 23:48:32 main.go:17: Reading database configuration
+INFO: 2021/09/13 23:48:32 main.go:25: Reading server configuration
+INFO: 2021/09/13 23:48:32 main.go:32: Initializing Program
+Error: 2021/09/13 23:48:36 get_news_handler.go:41: Can't retrieve news:  Error 1146: Table 'testers.NEWS' doesn't exist
+INFO: 2021/09/13 23:48:58 main.go:17: Reading database configuration
+INFO: 2021/09/13 23:48:58 main.go:25: Reading server configuration
+INFO: 2021/09/13 23:48:58 main.go:32: Initializing Program
+Error: 2021/09/13 23:49:00 get_news_handler.go:42: Can't retrieve news:  Error 1146: Table 'testers.NEWS' doesn't exist
+INFO: 2021/09/13 23:49:37 main.go:17: Reading database configuration
+INFO: 2021/09/13 23:49:37 main.go:25: Reading server configuration
+INFO: 2021/09/13 23:49:37 main.go:32: Initializing Program
+Error: 2021/09/13 23:49:39 get_news_handler.go:42: Can't retrieve news:  Error 1146: Table 'testers.NEWS' doesn't exist
+INFO: 2021/09/13 23:50:23 main.go:17: Reading database configuration
+INFO: 2021/09/13 23:50:23 main.go:25: Reading server configuration
+INFO: 2021/09/13 23:50:23 main.go:32: Initializing Program
+Error: 2021/09/13 23:50:26 get_news_handler.go:42: Can't retrieve news:  Error 1146: Table 'testers.NEWS' doesn't exist
+INFO: 2021/09/13 23:51:15 main.go:17: Reading database configuration
+INFO: 2021/09/13 23:51:15 main.go:25: Reading server configuration
+INFO: 2021/09/13 23:51:15 main.go:32: Initializing Program
+Error: 2021/09/13 23:51:17 get_news_handler.go:41: Can't retrieve news:  Error 1146: Table 'testers.NEWS' doesn't exist
+INFO: 2021/09/13 23:52:08 main.go:17: Reading database configuration
+INFO: 2021/09/13 23:52:08 main.go:25: Reading server configuration
+INFO: 2021/09/13 23:52:08 main.go:32: Initializing Program
+Error: 2021/09/13 23:52:10 get_news_handler.go:42: Can't retrieve news:  Error 1146: Table 'testers.NEWS' doesn't exist
+INFO: 2021/09/13 23:52:31 main.go:17: Reading database configuration
+INFO: 2021/09/13 23:52:31 main.go:25: Reading server configuration
+INFO: 2021/09/13 23:52:31 main.go:32: Initializing Program
+Error: 2021/09/13 23:52:34 get_news_handler.go:42: Can't retrieve news:  Error 1146: Table 'testers.NEWS' doesn't exist
+INFO: 2021/09/13 23:52:58 main.go:17: Reading database configuration
+INFO: 2021/09/13 23:52:58 main.go:25: Reading server configuration
+INFO: 2021/09/13 23:52:58 main.go:32: Initializing Program
+Error: 2021/09/13 23:53:03 get_news_handler.go:42: Can't retrieve news:  Error 1146: Table 'testers.NEWS' doesn't exist
+Error: 2021/09/13 23:55:17 get_news_handler.go:42: Can't retrieve news:  Error 1146: Table 'testers.NEWS' doesn't exist
+Error: 2021/09/13 23:55:28 get_news_handler.go:42: Can't retrieve news:  Error 1146: Table 'testers.NEWS' doesn't exist
+INFO: 2021/09/13 23:56:01 main.go:17: Reading database configuration
+INFO: 2021/09/13 23:56:01 main.go:25: Reading server configuration
+INFO: 2021/09/13 23:56:01 main.go:32: Initializing Program
+INFO: 2021/09/14 00:02:40 main.go:17: Reading database configuration
+INFO: 2021/09/14 00:02:40 main.go:25: Reading server configuration
+INFO: 2021/09/14 00:02:40 main.go:32: Initializing Program
+INFO: 2021/09/14 00:04:25 main.go:17: Reading database configuration
+INFO: 2021/09/14 00:04:25 main.go:25: Reading server configuration
+INFO: 2021/09/14 00:04:25 main.go:32: Initializing Program
+INFO: 2021/09/14 00:25:10 main.go:17: Reading database configuration
+INFO: 2021/09/14 00:25:10 main.go:25: Reading server configuration
+INFO: 2021/09/14 00:25:10 main.go:32: Initializing Program
+INFO: 2021/09/14 00:27:17 add_news_handler.go:12: Add news request received
+INFO: 2021/09/14 00:27:17 add_news_handler.go:32: News 'Hello World' is added into database
+INFO: 2021/09/14 00:30:09 modify_news_handler.go:29: Updating title of Future of Investation into Save, New Way to Invest
+INFO: 2021/09/14 00:30:09 modify_news_handler.go:42: Updating topic of Save, New Way to Invest into Published
+INFO: 2021/09/14 00:31:21 modify_news_handler.go:48: Request to add new tags received
+WARNING: 2021/09/14 00:31:21 modify_news_handler.go:64: News I am Rich already have tag Investation
+INFO: 2021/09/14 00:31:21 modify_news_handler.go:73: New tags added!
