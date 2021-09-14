@@ -1,5 +1,5 @@
 # Backend Takeaway 
-Update 14/09/2021 : Redis support added for all GET requests. 
+Update 14/09/2021 : Redis support added for all GET requests, my latest test log is supplied at the main page
 
 Written fully by Jonathan Richard. Database used : mysql, additional go packages:
 ### 1. github.com/go-sql-driver/mysql 
