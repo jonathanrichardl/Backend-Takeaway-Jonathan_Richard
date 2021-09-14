@@ -10,7 +10,5 @@ INFO: 2021/09/14 00:54:56 modify_news_handler.go:29: Updating title of Hello Wor
 INFO: 2021/09/14 00:54:56 modify_news_handler.go:42: Updating topic of Learn To Code with Udemy into Published
 INFO: 2021/09/14 00:55:29 modify_news_handler.go:79: Request to remove tags received
 INFO: 2021/09/14 00:55:29 modify_news_handler.go:87: New tags added!
-INFO: 2021/09/14 00:56:05 modify_news_handler.go:29: Updating title of Hello World into Learn To Code with Udemy
-INFO: 2021/09/14 00:56:05 modify_news_handler.go:42: Updating topic of Learn To Code with Udemy into Draft
 INFO: 2021/09/14 00:56:28 add_news_handler.go:12: Add news request received
-INFO: 2021/09/14 00:56:29 add_news_handler.go:32: News 'I am rich' is added into database
+INFO: 2021/09/14 00:56:29 add_news_handler.go:32: News 'I am rich' is removed from database
