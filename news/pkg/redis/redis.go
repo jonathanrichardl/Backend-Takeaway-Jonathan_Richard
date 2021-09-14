@@ -11,23 +11,24 @@ import (
 type RedisClient struct {
 	Redis   *redis.Client
 	Context context.Context
-	Timeout int
+	Timeout time.Duration
 }
 
 func NewRedisClient(Address string, Port int, Password string, DB int, Expiration int) *RedisClient {
-	Address = fmt.Sprintf("%s:%d", Address, Port)
+	address = fmt.Sprintf("%s:%d", Address, Port)
 	client := redis.NewClient(&redis.Options{
-		Addr:     Address,
+		Addr:     address,
 		Password: Password,
 		DB:       DB,
 	})
 	context := context.Background()
-	return &RedisClient{Redis: client, Context: context, Timeout: Expiration}
+	timeout = time.Duration(Expiration * int(time.Second))
+	return &RedisClient{Redis: client, Context: context, Timeout: timeout}
 
 }
 
 func (R *RedisClient) SetData(Key string, Data string) error {
-	err := R.Redis.Set(R.Context, Key, Data, time.Duration(R.Timeout*int(time.Second)))
+	err := R.Redis.Set(R.Context, Key, Data, R.Timeout)
 	return err.Err()
 
 }
