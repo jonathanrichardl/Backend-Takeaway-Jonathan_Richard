@@ -28,7 +28,7 @@ func main() {
 	}
 	//initializing db and router
 	Logger.InfoLogger.Println("Initializing Program")
-	Database, err := database.NewDatabase("mysql",
+	database, err := database.NewDatabase("mysql",
 		databaseConfig.Username, databaseConfig.Password, databaseConfig.Address,
 		databaseConfig.DatabaseName)
 	/*
