@@ -15,14 +15,14 @@ type RedisClient struct {
 }
 
 func NewRedisClient(Address string, Port int, Password string, DB int, Expiration int) *RedisClient {
-	address = fmt.Sprintf("%s:%d", Address, Port)
+	address := fmt.Sprintf("%s:%d", Address, Port)
 	client := redis.NewClient(&redis.Options{
 		Addr:     address,
 		Password: Password,
 		DB:       DB,
 	})
 	context := context.Background()
-	timeout = time.Duration(Expiration * int(time.Second))
+	timeout := time.Duration(Expiration * int(time.Second))
 	return &RedisClient{Redis: client, Context: context, Timeout: timeout}
 
 }
