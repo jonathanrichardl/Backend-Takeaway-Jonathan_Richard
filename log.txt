@@ -1,8 +1,3 @@
-INFO: 2021/09/14 00:51:34 main.go:17: Reading database configuration
-INFO: 2021/09/14 00:51:34 main.go:23: Reading server configuration
-INFO: 2021/09/14 00:51:34 main.go:30: Initializing Program
-Error: 2021/09/14 00:51:49 get_news_handler.go:18: Can't retrieve news from SQL:  Error 1045: Access denied for user ''@'localhost' (using password: NO)
-Error: 2021/09/14 00:51:53 get_news_handler.go:18: Can't retrieve news from SQL:  Error 1045: Access denied for user ''@'localhost' (using password: NO)
 INFO: 2021/09/14 00:52:39 main.go:17: Reading database configuration
 INFO: 2021/09/14 00:52:39 main.go:23: Reading server configuration
 INFO: 2021/09/14 00:52:39 main.go:30: Initializing Program
