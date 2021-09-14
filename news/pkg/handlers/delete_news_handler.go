@@ -24,4 +24,5 @@ func (h *HTTPHandler) DeleteNewsHandler(w http.ResponseWriter, r *http.Request) 
 	}
 	w.WriteHeader(204)
 	w.Write([]byte(fmt.Sprintf("204 - News '%s' has been deleted", newsTitle)))
+	h.logger.InfoLogger.Printf("News %s has been deleted from database", newsTitle)
 }
